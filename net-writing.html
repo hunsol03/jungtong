@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
+</head>
+<style>
+
+    .title {
+        font-family: 'Black Han Sans', sans-serif;
+        font-size: 30px;
+        color: #e97af3;
+    }
+    .box{
+        text-align: center;
+    }
+    li {
+        list-style: none;
+    }
+    h1 {
+        color: #525252;
+        text-align: center;
+    }
+    .gradient-border { --borderWidth: 5px; background: #ffffff; position: relative; border-radius: var(--borderWidth); } 
+    .gradient-border:after { 
+        content: ''; 
+        position: absolute; 
+        top: calc(-1 * var(--borderWidth)); 
+        left: calc(-1 * var(--borderWidth)); 
+        height: calc(100% + var(--borderWidth) * 2); 
+        width: calc(100% + var(--borderWidth) * 2); 
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82); 
+        border-radius: calc(1.5 * var(--borderWidth)); z-index: -1; animation: animatedgradient 2s ease alternate infinite; background-size: 300% 300%; 
+} 
+@keyframes animatedgradient { 
+    0% { background-position: 0% 50%; } 
+    50% { background-position: 100% 50%; } 
+    100% { background-position: 0% 50%; } 
+}
+#date{
+    color: #000000;
+    margin-bottom: 45px;
+}
+
+</style>
+<script>
+    let today = new Date();
+    let year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let date = today.getDate();
+    const DisplayDate = () => {
+    document.getElementById("date").innerHTML = `${year}년 ${month}월 ${date}일`;
+    }
+</script>
+<body>
+    <div id="date">
+    </div>
+    
+    <h1>이 페이지는 정보보호 네트워크 필기 정리 페이지 입니다.</h1>
+
+    <div class="box">
+    <div class="gradient-border">
+    <p class="title">TCP</p>
+    <ul>
+        <li>Transmission Control Protocol의 약어, ip 프로토콜 위에서 연결형 서비스를 지원하는 전송계층 프로토콜</li>
+        <li>연결형 서비스 제공</li>
+        <li>전이중 방식의 양방향 가상 회선 제공</li>
+        <li>신뢰성 있는 데이터 전송 보장</li>
+        <li>혼잡제어, 프름제어, 오류 회복 및 재전송</li>
+    </ul>
+</div>
+<div class="gradient-border">
+    <p class="title">UDP</p>
+    <ul>
+        <li>인터넷에서 사용하는 프로토콜 중 가장 간단한 구조</li>
+        <li>비 연결형 서비스 제공</li>
+        <li>헤더와 전송 데이터에 대한 체크섬 기능 제공</li>
+        <li>Best Effort 전달 방식 지원</li>
+    </ul>
+    </div>
+    <div class="gradient-border">
+    <p class="title">ARP</p>
+    <ul>
+        <li>Address Resolution Protocol의 약어 </li>
+        <li>IP주소를 물리계층에서 이용하는 하드웨어 주소로 매핑</li>
+        <li>중복된 IP할당을 찾아낸다</li>
+        <li>ARP 캐시가 갱신되는 경우 : 새로운 네트워크 하드웨어 추가, 새로운 IP ADDRESS가 재할당, 중복된 IP ADDRESS가 할당</li>
+        <li>이웃 요청과 광고 메시지</li>
+    </ul>
+    </div>
+    <div class="gradient-border">
+    <p class="title">ICMP</p>
+    <ul>
+        <li>Internet Contorol Message Protocol의 약어</li>
+        <li>인터넷 환경에서 오류에 관한 처리를 지원하는 용도로 사용되며, ip 패킷의 데이터 부분에 캡슐화되어 송신 호스트에게 전달</li>
+        <li>tcp/ip 기반의 통신망에서 전송 과정에 문제가 발생하면 라우터에 의해 icmp 메시지가 자동 발생</li>
+    </ul>
+    </div>
+    <div class="gradient-border">
+    <p class="title">MTU</p>
+    <ul>
+        <li>네트워크를 통해 전송할 수 있는 최대 데이터양</li>
+        <li>크기가 작으면 재전송이 자주 발생, 크기가 크면 빈 패킷이 발생하는 등 전송 효율이 저하 됨</li>
+        <li>큰 MTU에서 작은 MTU로 전송시 라우터에 의해 분열</li>
+    </ul>
+    </div>
+    <div class="gradient-border">
+    <p class="title">IP</p>
+    <ul>
+        <li>internet Protocol의 약어, 네트워크 상에 연결된 단말기 등이 가지고 있는 고유한 주소를 IP주소라고 함</li>
+        <li>TTL(TIME TO LIVE) : 해당 패킷이 너무 오래 네트워크 상에 있어서 버려져야하는지의 여부를 라우터에 전송</li>
+        <li>TOS : QOS기능을 위한 서비스 형식 필드</li>
+        <li>헤더부분 : 버전 헤더길이 ip주소 포함</li>
+    </ul>
+    </div>
+    </div>
+</body>
+</html>

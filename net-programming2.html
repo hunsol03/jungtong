@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
+</head>
+<style>
+.title {
+        font-family: 'Black Han Sans', sans-serif;
+        font-size: 20px;
+        color: #e97af3;
+    }
+
+input {
+  color:#3c3c3c; 
+  font-family: 'Black Han Sans', sans-serif;
+  font-size: 30px;
+  text-align: center;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 0;
+  line-height: 22px;
+  background-color: #ffffff;
+  padding: 13px 13px 13px 54px;
+  margin-bottom: 10px;
+  width: 300px;
+  
+  border: 2px solid ;
+}
+
+
+
+.container { --borderWidth: 5px; background: #ffffff; position: relative; border-radius: var(--borderWidth); } 
+    .container:after { 
+        content: ''; 
+        position: absolute; 
+        top: calc(-1 * var(--borderWidth)); 
+        left: calc(-1 * var(--borderWidth)); 
+        height: calc(100% + var(--borderWidth) * 2); 
+        width: calc(100% + var(--borderWidth) * 2); 
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82); 
+        border-radius: calc(1.5 * var(--borderWidth)); z-index: -1; animation: animatedgradient 2s ease alternate infinite; background-size: 300% 300%; 
+} 
+@keyframes animatedgradient { 
+    0% { background-position: 0% 50%; } 
+    50% { background-position: 100% 50%; } 
+    100% { background-position: 0% 50%; } 
+}
+</style>
+
+<body>
+    <h1>이 페이지는 정보보호 네트워크 실기(linux) 시험 페이지 입니다.</h1>
+    <div class="container">
+        <p class="title">shutdown 명령어에서 리눅스 시스템을 재부팅 시키는 옵션은? (ls -l 과 같이 옵션을 다 입력하세요)</p>
+        <input type="text" id='boxing'>    
+        <input type="button" id='butbox' value="정답" onclick="answer()">
+    </div>
+    <div class="container">
+        <p class="title">리눅스 디렉토리 중 모든 장치들이 파일로 표시되는 것은?</p>
+        <input type="text" id='boxing2'>    
+        <input type="button" id='butbox' value="정답" onclick="answer2()">
+    </div>
+    <div class="container">
+        <p class="title">권한 설정 명령어는 무엇인가?</p>
+        <input type="text" id='boxing3'>    
+        <input type="button" id='butbot' value="정답" onclick="answer3()">
+    </div>
+    <div class="container">
+        <p class="title">특정 호스트 또는 연결된 노드를 알아보는 명령어는?</p>
+        <input type="text" id='boxing4'>    
+        <input type="button" id='butbot' value="정답" onclick="answer4()">
+    </div>
+    <div class="container">
+        <p class="title">호스트 컴퓨터가 TCP/IP 네트워크 및 네트워크 리소스에 연결가능을 확인하는 것은?</p>
+        <input type="text" id='boxing5'>    
+        <input type="button" id='butbot' value="정답" onclick="answer5()">
+    </div>
+
+<script>
+    function answer(){
+        var tb = document.getElementById('boxing').value;
+        var ans = "shutdown -r";
+        if(tb == ans) confirm("정답입니다!")
+        else confirm("오답이지롱");
+    }
+    function answer2(){
+        var tb = document.getElementById('boxing2').value;
+        var ans = "/dev";
+        if(tb == ans) confirm("정답입니다!")
+        else confirm("오답이지롱");
+    }
+    function answer3(){
+        var tb = document.getElementById('boxing3').value;
+        var ans = "chmod";
+        if(tb == ans) confirm("정답입니다!")
+        else confirm("오답이지롱");
+    }
+    function answer4(){
+        var tb = document.getElementById('boxing4').value;
+        var ans = "traceroute";
+        if(tb == ans) confirm("정답입니다!")
+        else confirm("오답이지롱");
+    }
+    function answer5(){
+        var tb = document.getElementById('boxing5').value;
+        var ans = "ping";
+        if(tb == ans) confirm("정답입니다!")
+        else confirm("오답이지롱");
+    }
+</script>
+</body>
+</html>

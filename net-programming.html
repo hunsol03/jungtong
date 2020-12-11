@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
+</head>
+<style>
+.title {
+        font-family: 'Black Han Sans', sans-serif;
+        font-size: 30px;
+        color: #e97af3;
+    }
+.box{
+    text-align: center;
+}
+
+.subtitle{
+    font-size: 10px;
+    color: #6e6e6e;
+}
+
+@media screen and (max-width: 960px) {
+
+}
+
+
+.container { --borderWidth: 5px; background: #ffffff; position: relative; border-radius: var(--borderWidth); } 
+    .container:after { 
+        content: ''; 
+        position: absolute; 
+        top: calc(-1 * var(--borderWidth)); 
+        left: calc(-1 * var(--borderWidth)); 
+        height: calc(100% + var(--borderWidth) * 2); 
+        width: calc(100% + var(--borderWidth) * 2); 
+        background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82); 
+        border-radius: calc(1.5 * var(--borderWidth)); z-index: -1; animation: animatedgradient 2s ease alternate infinite; background-size: 300% 300%; 
+} 
+@keyframes animatedgradient { 
+    0% { background-position: 0% 50%; } 
+    50% { background-position: 100% 50%; } 
+    100% { background-position: 0% 50%; } 
+}
+</style>
+<body>
+    <h1>이 페이지는 정보보호 네트워크 실기 정리 페이지 입니다.</h1>
+    <div class="box">
+        <div class="container">
+            <p class="title">케이블링 문제</p>
+            <img src="./img/cable.jpg" alt="" > <br>
+            <iframe class="youtube" width="705" height="397" src="https://www.youtube.com/embed/VUG_i4DHPKs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="subtitle">해설영상을 보고 만들어 보시기 바랍니다.</p>
+        </div>
+        <div class="container">
+            <p class="title">ip주소설정</p>
+            <img src="./img/1.jpg" alt="" > <br>
+            <img src="./img/2.jpg" alt="" > <br>
+            <p class="subtitle">해설을 잘 따라하시기 바랍니다.</p>
+        </div>
+        <div class="container">
+            <p class="title">Web사이트 추가</p>
+            <img src="./img/3.jpg" alt="" > <br>
+            <p class="subtitle">사이트 오른쪽 마우스 클릭 > 웹사이트 추가에서 설정</p>
+            <img src="./img/4.jpg" alt="" > <br>
+            <img src="./img/5.jpg" alt="" > <br>
+            <p class="subtitle">오른쪽 마우스 > 허용 범위 설정</p>
+            <img src="./img/6.jpg" alt="" > <br>
+            <img src="./img/7.jpg" alt="" > <br>
+            <p class="subtitle">ICQA를 다시 누르면 변동사항 확인 메세지 뜸 > 확인</p>
+        </div>
+        <div class="container">
+            <p class="title">서비스 설정</p>
+            <img src="./img/8.jpg" alt="" > <br>
+            <p class="subtitle">설명을 눌러서 동일한 설명인 부분을 찾았음.</p>
+            <img src="./img/9.jpg" alt="" > <br>
+            <img src="./img/10.jpg" alt="" > <br>
+            <p class="subtitle">중지 > 사용 안 함 설정</p>
+        </div>
+        <div class="container">
+            <p class="title">DHCP 설정</p>
+            <img src="./img/a.jpg" alt="" > <br>
+            <img src="./img/b.jpg" alt="" > <br>
+            <img src="./img/c.jpg" alt="" > <br>
+            <img src="./img/d.jpg" alt="" > <br>
+            <img src="./img/e.jpg" alt="" > <br>
+            <img src="./img/f.jpg" alt="" > <br>
+            <img src="./img/g.jpg" alt="" > <br>
+        </div>
+        <div class="container">
+            <p class="title">DNS 설정</p>
+            <img src="./img/aa.jpg" alt="" > <br>
+            <img src="./img/bb.jpg" alt="" > <br>
+            <img src="./img/cc.jpg" alt="" > <br>
+            <img src="./img/dd.jpg" alt="" > <br>
+            <img src="./img/ee.jpg" alt="" > <br>
+            <img src="./img/ff.jpg" alt="" > <br>
+            <img src="./img/gg.jpg" alt="" > <br>
+            <img src="./img/hh.jpg" alt="" > <br>
+            <img src="./img/ii.jpg" alt="" > <br>
+            <img src="./img/jj.jpg" alt="" > <br>
+            <img src="./img/kk.jpg" alt="" > <br>
+            <img src="./img/ll.jpg" alt="" > <br>
+            
+        </div>
+
+    </div>
+</body>
+</html>
